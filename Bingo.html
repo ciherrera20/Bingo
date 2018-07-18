@@ -12,7 +12,7 @@
 		<div id="inputsDiv" class="dynamicPos">
 			<input id="addBingo" class="button" type="button" value="Add Bingo"></input>
 			<span>|</span>
-			<label id="winConditionLabel" for="winCondition" class="select">
+			<div id="winConditionLabel" for="winCondition" class="select">
 				<span>Condition:</span>
 				<select id="winCondition">
 					<option>-</option>
@@ -23,7 +23,7 @@
 					<option>Full</option>
 					<option>Custom</option>
 				</select>
-			</label>
+			</div>
 			<span>|</span>
 			<input id="number" class="textInput" type="text" placeholder="Number"></input>
 			<input id="enterNumber" class="button" type="button" value="Enter"></input>
@@ -195,6 +195,16 @@
 			{
 				flex: 0 0 auto;
 			}
+			
+			#inputsDiv
+			{
+				margin: 0 -2px;
+			}
+			
+			#inputsDiv > *
+			{
+				margin: 0 2px;
+			}
 		
 		
 		
@@ -207,7 +217,11 @@
 			.button
 			{
 				display: inline-block;
-				border: 2px solid #c8c9ba;
+				border: 2px solid;
+				border-right-color: #c8c9ba;
+				border-top-color: #c8c9ba;
+				border-left-color: #aaaaaa;
+				border-bottom-color: #aaaaaa;
 				background: #f2f2f2;
 				text-align: center;
 				font-family: Courier;
@@ -215,19 +229,30 @@
 				height: 21.2px;
 				outline: none;
 				-webkit-transition: .2s;
-				transition: background .2s;
-
+				transition: background-color .2s;
 			}
 			
 			.button:hover
 			{
-				background: #e3e3e3;
+				background-color: #e3e3e3;
+			}
+			
+			.button:active
+			{
+				border-right-color: #aaaaaa;
+				border-top-color: #aaaaaa;
+				border-left-color: #c8c9ba;
+				border-bottom-color: #c8c9ba;
 			}
 			
 			.textInput
 			{
 				display: inline-block;
-				border: 2px solid #c8c9ba;
+				border: 2px solid;
+				border-right-color: #c8c9ba;
+				border-top-color: #c8c9ba;
+				border-left-color: #aaaaaa;
+				border-bottom-color: #aaaaaa;
 				background-color: #f2f2f2;
 				text-align: center;
 				font-family: Courier;
@@ -236,11 +261,6 @@
 				outline: none;
 				-webkit-transition: .2s;
 				transition: background .2s;
-			}
-			
-			.textInput:hover, .textInput:focus
-			{
-				background-color: #f6f6f6;
 			}
 			
 			.textInput::-webkit-input-placeholder
@@ -258,7 +278,11 @@
 			.select
 			{
 				display: inline-block;
-				border: 2px solid #c8c9ba;
+				border: 2px solid;
+				border-right-color: #c8c9ba;
+				border-top-color: #c8c9ba;
+				border-left-color: #aaaaaa;
+				border-bottom-color: #aaaaaa;
 				background-color: #f2f2f2;
 				font-family: Courier;
 				font-size: 10pt;
@@ -280,7 +304,7 @@
 				margin-top: 0.5px;
 				margin-left: -5px;
 				border: none;
-				border-left: 2px solid #c8c9ba;
+				border-left: 2px solid #cccccc;
 				outline: none;
 				background-color: inherit;
 			}
@@ -362,7 +386,7 @@
 			{
 				display: block;
 				border: 2px solid #c8c9ba;
-				width: 442px;
+				width: 442.5px;
 				height: 50px;
 				margin-top: 10px;
 				text-align: center;
